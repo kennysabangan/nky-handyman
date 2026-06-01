@@ -70,7 +70,7 @@ export const siteConfig = {
   brandColor: "#1a6bb5",
 
   // ── Hero content ─────────────────────────────────────────────────
-  heroTagline: "Northern Kentucky's Trusted Handyman Service",
+  heroTagline: "Northern Kentucky Handyman Service",
   heroSubtext: "No job too small. Reliable home repairs and improvements. Call for a free estimate.",
   heroAlt: "Professional handyman performing home repairs",
 
@@ -98,7 +98,7 @@ export const siteConfig = {
       title: "Fixture Installation",
       slug: "fixture-installation",
       description:
-        "Ceiling fans, light fixtures, faucets, toilets, TV mounting, shelving, and more. Professional installation done right the first time. Licensed and insured handyman service across Northern Kentucky.",
+        "Ceiling fans, light fixtures, faucets, toilets, TV mounting, shelving, and more. Professional installation done right the first time. Professional handyman service across Northern Kentucky.",
       photo: "/photos/commercial.jpg",
     },
     {
@@ -115,7 +115,7 @@ export const siteConfig = {
     {
       question: "How much does a handyman cost in Northern Kentucky?",
       answer:
-        "Most handyman work runs $60-80 per hour with a 2-hour minimum. Flat-rate pricing available for specific jobs. Call (859) 555-0400 for a free estimate.",
+        "Call (859) 555-0400 for a free estimate. Pricing varies by job.",
     },
     {
       question: "Do you handle small jobs?",
@@ -307,7 +307,7 @@ export const siteConfig = {
       lat: "39.2289",
       lng: "-84.3541",
       intro:
-        "Montgomery's tree-canopied streets and stately homes demand quality craftsmanship. NKY Handyman Pros extends our services to Montgomery homeowners who expect the best — from historic properties near the village center to sprawling estates on the outskirts. We bring the same meticulous attention to detail that has made us Northern Kentucky's most trusted handyman service.",
+        "Montgomery's tree-canopied streets and stately homes demand quality craftsmanship. NKY Handyman Pros extends our services to Montgomery homeowners who expect quality service — from historic properties near the village center to sprawling estates on the outskirts. We bring the same meticulous attention to detail on every job. handyman service.",
     },
     {
       name: "Deer Park, OH",
@@ -315,7 +315,7 @@ export const siteConfig = {
       lat: "39.2053",
       lng: "-84.3922",
       intro:
-        "Deer Park is a welcoming, family-friendly community just north of Cincinnati. NKY Handyman Pros is proud to bring our handyman services to this great neighborhood — from well-kept ranch homes along Blue Ash Road to two-story colonials in the side streets. We offer flexible scheduling, fair pricing, and the kind of dependable service that Deer Park homeowners appreciate.",
+        "Deer Park is a welcoming, family-friendly community just north of Cincinnati. NKY Handyman Pros is proud to bring our handyman services to this great neighborhood — from well-kept ranch homes along Blue Ash Road to two-story colonials in the side streets. We offer flexible scheduling, Flexible scheduling, and the kind of dependable service that Deer Park homeowners appreciate.",
     },
     {
       name: "Amberly, OH",
@@ -399,7 +399,7 @@ export const siteConfig = {
     },
     {
       quote:
-        "Finally found a handyman who actually shows up and does quality work. Fixed our deck railing, patched some holes, and installed a new light fixture. Best handyman in Northern Kentucky.",
+        "Finally found a handyman who actually shows up and does quality work. Fixed our deck railing, patched some holes, and installed a new light fixture. Professional handyman service in Northern Kentucky.",
       name: "Sarah K.",
       city: "Fort Mitchell, KY",
     },
@@ -426,7 +426,7 @@ export const siteConfig = {
     {
       name: "Sarah K.",
       location: "Fort Mitchell, KY",
-      text: "Finally found a handyman who actually shows up and does quality work. Fixed our deck railing, patched some holes, and installed a new light fixture. Best handyman in Northern Kentucky.",
+      text: "Finally found a handyman who actually shows up and does quality work. Fixed our deck railing, patched some holes, and installed a new light fixture. Professional handyman service in Northern Kentucky.",
     },
     {
       name: "Mike D.",
@@ -441,7 +441,7 @@ export const siteConfig = {
     {
       name: "Dave S.",
       location: "Newport, KY",
-      text: "Called for help with some home repairs in Newport. They gave us a fair price over the phone and came out the same week. Fixed a squeaky door, patched drywall, and installed a new bathroom faucet. Great service, great price.",
+      text: "Called for help with some home repairs in Newport. They gave us a competitive price over the phone and came out the same week. Fixed a squeaky door, patched drywall, and installed a new bathroom faucet. Great service, great service.",
     },
     {
       name: "Karen L.",
@@ -451,7 +451,7 @@ export const siteConfig = {
     {
       name: "Tom W.",
       location: "Fort Thomas, KY",
-      text: "Our Fort Thomas home needed a bunch of small repairs — trim, doors, a ceiling fan. These guys handled it all in one visit. Quality work, cleaned up after themselves. Best handyman service in NKY.",
+      text: "Our Fort Thomas home needed a bunch of small repairs — trim, doors, a ceiling fan. These guys handled it all in one visit. Quality work, cleaned up after themselves. Professional handyman service in NKY.",
     },
   ] as { name: string; location: string; text: string }[],
 };
