@@ -34,8 +34,8 @@ export interface Testimonial {
 export const siteConfig = {
   // ── Business identity ──────────────────────────────────────────────
   businessName: "NKY Handyman Pros",
-  phone: "(859) 555-0400",
-  phoneE164: "+18595550400",
+  phone: "(859) 900-8065",
+  phoneE164: "+18599008065",
   domain: "nkyhandymanpros.com",
   siteUrl: "https://nkyhandymanpros.com",
 
@@ -106,7 +106,7 @@ export const siteConfig = {
       slug: "honey-do-lists",
       description:
         "Got a list of tasks? We'll knock them all out in one visit. From hanging pictures to fixing squeaky doors to patching holes — we work through your list efficiently and affordably.",
-      photo: "/photos/screen-cleaning.jpg",
+      photo: "/photos/honey-do-list.jpg",
     },
   ] as Service[],
 
@@ -115,7 +115,7 @@ export const siteConfig = {
     {
       question: "How much does a handyman cost in Northern Kentucky?",
       answer:
-        "Call (859) 555-0400 for a free estimate. Pricing varies by job.",
+        "Call (859) 900-8065 for a free estimate. Pricing varies by job.",
     },
     {
       question: "Do you handle small jobs?",
@@ -150,7 +150,7 @@ export const siteConfig = {
     {
       question: "How do I schedule service?",
       answer:
-        "Call us at (859) 555-0400. We serve Florence, Covington, Fort Mitchell, Erlanger, and all of Northern Kentucky.",
+        "Call us at (859) 900-8065. We serve Florence, Covington, Fort Mitchell, Erlanger, and all of Northern Kentucky.",
     },
   ] as FAQ[],
 
