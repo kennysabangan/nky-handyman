@@ -14,7 +14,7 @@ const serviceSchema = {
     "name": businessName,
     "telephone": phoneE164,
   },
-  "areaServed": { "@type": "State", "name": "Kentucky" },
+  "areaServed": siteConfig.cities.map((c) => ({ "@type": "City", "name": c.name })),
   "description": `Professional handyman services for residential and commercial properties in ${city}.`,
 };
 
@@ -29,7 +29,7 @@ const breadcrumbSchema = {
 ---
 
 <BaseLayout
-  title={`Handyman Services ${city} | ${businessName}`}
+  title={`Handyman Service Areas in Northern Kentucky | ${businessName}`}
   description={`Handyman services in ${city}. We provide home repairs, fixture installations, and honey-do list services across ${region}. Call ${phone} for a free estimate.`}
   canonicalURL={`${siteUrl}/handyman/`}
   schema={[breadcrumbSchema, serviceSchema]}
@@ -82,11 +82,11 @@ const breadcrumbSchema = {
 
   <p><strong>Step 3: We Do the Work.</strong> Our team arrives on time with all the tools and supplies needed. We work efficiently, treat your home with respect, and clean up when we're done.</p>
 
-  <p><strong>Step 4: Enjoy Your Home.</strong> Your repairs are done, your fixtures are installed, and your to-do list is cleared. Not happy with something? We'll make it right. That's our satisfaction guarantee.</p>
+  <p><strong>Step 4: Walk-Through.</strong> Before we leave, we go over the finished list with you. If something isn't right, point it out while we're still there.</p>
 
   <h2 class="text-brand text-xl md:text-2xl font-bold mb-4 mt-8">Handyman Service Areas</h2>
 
-  <p>We provide handyman services across {city}. We serve:</p>
+  <p>Our main service areas in Boone, Kenton, and Campbell counties:</p>
 
   <ul>
     {cities.map((c) => (

@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import PhoneCTA from '../components/PhoneCTA.astro';
 import { siteConfig } from '../config';
 
-const { businessName, phone, siteUrl, serviceKeyword, serviceKeywordPlural, city, region, cities } = siteConfig;
+const { businessName, phone, siteUrl, city, region, cities, services } = siteConfig;
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
@@ -18,7 +18,7 @@ const aboutPageSchema = {
   "@context": "https://schema.org",
   "@type": "AboutPage",
   "name": `About ${businessName}`,
-  "description": `Learn about ${businessName} — ${city}'s professional ${serviceKeyword} professionals serving Florence, Covington, Fort Mitchell, and all ${region} cities.`,
+  "description": `${businessName} provides home repairs, fixture installation, and honey-do list services in ${city}.`,
   "mainEntity": {
     "@type": "LocalBusiness",
     "name": businessName,
@@ -28,8 +28,8 @@ const aboutPageSchema = {
 ---
 
 <BaseLayout
-  title={`About Us | ${businessName} | ${serviceKeyword.charAt(0).toUpperCase() + serviceKeyword.slice(1)} ${city}`}
-  description={`${businessName} is a locally owned handyman company serving ${city}. We provide home repairs, fixture installations, and honey-do list services in Florence, Covington, Fort Mitchell, Erlanger, and all across ${region}. Licensed and committed to quality work.`}
+  title={`About Us | ${businessName}`}
+  description={`${businessName} handles home repairs, fixture installations, and honey-do lists in Florence, Covington, Fort Thomas, Newport, and across ${region}. Free estimates.`}
   canonicalURL={`${siteUrl}/about/`}
   schema={[breadcrumbSchema, aboutPageSchema]}
 >
@@ -38,7 +38,7 @@ const aboutPageSchema = {
 <section class="hero-section">
   <div class="container">
     <h1>About {businessName}</h1>
-    <p class="hero-sub">Locally owned handyman company serving {city}.</p>
+    <p class="hero-sub">Handyman services for Northern Kentucky homes and businesses.</p>
     <PhoneCTA />
   </div>
 </section>
@@ -55,13 +55,15 @@ const aboutPageSchema = {
 
 <!-- About content -->
 <div class="content-section">
-  <h2 class="text-brand text-xl md:text-2xl font-bold mb-4">Who We Are</h2>
+  <h2 class="text-brand text-xl md:text-2xl font-bold mb-4">What We Do</h2>
 
-  <p>{businessName} is a locally owned and operated handyman company based in {city}. We provide reliable home repairs, fixture installations, and general handyman services for homeowners and businesses across {region}.</p>
+  <p>{businessName} handles the small and mid-sized jobs around the house that are hard to find someone for: drywall patches, sticking doors, trim and caulking, fixture swaps, TV mounts, shelving, and the rest of the to-do list. We work for homeowners, landlords, and small businesses across {region}.</p>
 
-  <p>We started this company because we saw a need for a dependable handyman service in {city}. Too many homeowners were dealing with contractors who didn't show up on time, didn't finish the job, or charged too much for small repairs. We set out to be different — a handyman service that treats every job, big or small, with the same level of care.</p>
-
-  <p>Today, we serve over 15 communities across {city}. Our handyman team is fully licensed, insured, and background-checked. We show up on time, do the job right, and deliver quality work with a quality work you can count on.</p>
+  <ul>
+    {services.map((s) => (
+      <li><strong>{s.title}</strong> — {s.description}</li>
+    ))}
+  </ul>
 
   <img
     src="/photos/residential.jpg"
@@ -70,32 +72,25 @@ const aboutPageSchema = {
     loading="lazy"
   />
 
-  <h2 class="text-brand text-xl md:text-2xl font-bold mb-4 mt-8">What We Do</h2>
+  <h2 class="text-brand text-xl md:text-2xl font-bold mb-4 mt-8">How a Job Works</h2>
 
-  <p>We provide handyman services for residential and commercial properties throughout {city}. Our services include:</p>
+  <p><strong>1. Call.</strong> Call {phone} or send the form with your list. For most jobs we can give you a ballpark price over the phone; larger jobs get a free in-home estimate.</p>
+
+  <p><strong>2. Schedule.</strong> We can usually schedule within two to three days. Let us know which fixtures or materials you already have, and we'll bring basic supplies.</p>
+
+  <p><strong>3. Work and walk-through.</strong> We work through the list, clean up, and go over the finished work with you before we leave. If a job needs a permit or a licensed electrician or plumber, we'll tell you up front.</p>
+
+  <h2 class="text-brand text-xl md:text-2xl font-bold mb-4 mt-8">Where We Work</h2>
+
+  <p>Our main service areas in Boone, Kenton, and Campbell counties:</p>
 
   <ul>
-    {siteConfig.services.map((s) => (
-      <li><strong>{s.title}</strong> — {s.description.split('.').slice(0, 2).join('.')}.</li>
+    {cities.map((c) => (
+      <li><a href={`/handyman/${c.slug}/`}>Handyman in {c.name}</a></li>
     ))}
   </ul>
 
-  <h2 class="text-brand text-xl md:text-2xl font-bold mb-4 mt-8">Why {city} Trusts Us</h2>
-
-  <ul>
-    <li>Professional, insured handyman company</li>
-    <li>Background-checked, professional technicians</li>
-    <li>On-time arrival — we respect your schedule</li>
-    <li>Fair, upfront pricing — no surprises</li>
-    <li>We handle jobs big and small — no job too minor</li>
-    <li>quality work you can count on on every job</li>
-    <li>Locally owned and operated in {city}</li>
-    <li>Free estimates — just call {phone}</li>
-  </ul>
-
-  <h2 class="text-brand text-xl md:text-2xl font-bold mb-4 mt-8">Where We Serve</h2>
-
-  <p>We provide handyman services throughout {city}, including {cities.map((c) => c.name).join(', ')}. If you're in {city} and need a reliable handyman, call us at {phone}.</p>
+  <p>Close by but not on the list? Call {phone} and ask.</p>
 </div>
 
 <!-- CTA -->
