@@ -28,8 +28,8 @@ export interface FAQ {
 export const siteConfig = {
   // ── Business identity ──────────────────────────────────────────────
   businessName: "NKY Handyman Pros",
-  phone: "(859) 900-8065",
-  phoneE164: "+18599008065",
+  phone: "(714) 494-9486",
+  phoneE164: "+17144949486",
   domain: "nkyhandymanpros.com",
   siteUrl: "https://nkyhandymanpros.com",
 
@@ -113,7 +113,7 @@ export const siteConfig = {
     {
       question: "How much does a handyman cost in Northern Kentucky?",
       answer:
-        "Call (859) 900-8065 for a free estimate. Pricing varies by job.",
+        "Call (714) 494-9486 for a free estimate. Pricing varies by job.",
     },
     {
       question: "Do you handle small jobs?",
@@ -143,7 +143,7 @@ export const siteConfig = {
     {
       question: "How do I schedule service?",
       answer:
-        "Call us at (859) 900-8065. Our main service areas are Florence, Covington, Fort Thomas, Newport, Fort Mitchell, Erlanger, Edgewood, and Independence.",
+        "Call us at (714) 494-9486. Our main service areas are Florence, Covington, Fort Thomas, Newport, Fort Mitchell, Erlanger, Edgewood, and Independence.",
     },
   ] as FAQ[],
 
