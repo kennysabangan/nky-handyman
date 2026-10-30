@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PhoneCTA from '../../components/PhoneCTA.astro';
-import { siteConfig } from '../../config';
+import { siteConfig, fitTitle } from '../../config';
 
 const { businessName, phone, phoneE164, siteUrl, serviceKeyword, serviceKeywordPlural, city, region, services, cities } = siteConfig;
 
@@ -29,8 +29,8 @@ const breadcrumbSchema = {
 ---
 
 <BaseLayout
-  title={`Handyman Service Areas in Northern Kentucky | ${businessName}`}
-  description={`Handyman services in ${city}. We provide home repairs, fixture installations, and honey-do list services across ${region}. Call ${phone} for a free estimate.`}
+  title={fitTitle('Handyman Service Areas in Northern KY')}
+  description={`Handyman service areas in ${city}: home repairs, fixture installations, and honey-do lists across ${region}. Call ${phone} for a free estimate.`}
   canonicalURL={`${siteUrl}/handyman/`}
   schema={[breadcrumbSchema, serviceSchema]}
 >

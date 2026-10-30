@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { siteConfig } from '../../config';
+import { siteConfig, fitTitle } from '../../config';
 import type { City } from '../../config';
 
 export function getStaticPaths() {
@@ -39,8 +39,8 @@ const stateAbbr = city.name.includes('OH') ? 'OH' : 'KY';
 ---
 
 <BaseLayout
-  title={`Handyman in ${city.name} | ${businessName}`}
-  description={`Need a handyman in ${city.name}? ${businessName} provides home repairs, fixture installations, and honey-do list services in ${cityName} and all across ${regionCity}. Call ${phone} for a free estimate.`}
+  title={fitTitle(`Handyman in ${city.name}`)}
+  description={`Handyman in ${city.name}: home repairs, fixture installations, and honey-do lists in ${cityName} and across ${regionCity}. Call ${phone}.`}
   canonicalURL={`${siteUrl}/handyman/${city.slug}/`}
   schema={[breadcrumbSchema, cityServiceSchema]}
 >
